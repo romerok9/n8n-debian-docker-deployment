@@ -1,0 +1,34 @@
+tunnel: YOUR_TUNNEL_UUID_HERE
+credentials-file: /root/.cloudflared/YOUR_TUNNEL_UUID_HERE.json
+
+ingress:
+  # n8n automation platform
+  - hostname: n8n.yourdomain.com
+    service: http://localhost:5678
+  
+  # Main website (optional)
+  - hostname: yourdomain.com
+    service: http://localhost:80
+  
+  # Catch-all rule (required)
+  - service: http_status:404
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# CONFIGURATION NOTES:
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+#
+# 1. Replace YOUR_TUNNEL_UUID_HERE with your actual tunnel UUID
+#    Get it from: cloudflared tunnel list
+#
+# 2. Replace yourdomain.com with your actual domain
+#
+# 3. The credentials-file path should match your tunnel UUID
+#
+# 4. Add DNS CNAME records in Cloudflare dashboard:
+#    - n8n.yourdomain.com -> YOUR_TUNNEL_UUID.cfargotunnel.com
+#    - yourdomain.com -> YOUR_TUNNEL_UUID.cfargotunnel.com
+#
+# 5. Each hostname must have a corresponding DNS record
+#
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+

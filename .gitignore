@@ -1,0 +1,39 @@
+# Environment variables
+.env
+*.env
+!env.example
+!*.env.example
+
+# Backups
+backups/
+*.sql
+*.sql.gz
+
+# Docker volumes data
+pg_data/
+n8n_data/
+
+# Cloudflare credentials
+*.json
+!package.json
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
