@@ -106,16 +106,15 @@ https://n8n.yourdomain.com
 n8n-debian-docker-deployment/
 ├── docker-compose.yml           # Definición de servicios
 ├── config/
-│   ├── .env.example            # Variables de entorno (template)
-│   ├── cloudflared-config.yml  # Configuración Cloudflare Tunnel
-│   └── nginx.conf              # Configuración Nginx (opcional)
+│   ├── env.example             # Variables de entorno (template)
+│   └── cloudflared-config.yml  # Configuración Cloudflare Tunnel
 ├── docs/
-│   ├── CLOUDFLARE_SETUP.md     # Guía configuración Cloudflare
-│   ├── TROUBLESHOOTING.md      # Solución de problemas
-│   └── UPGRADE.md              # Guía de actualización
+│   └── CLOUDFLARE_SETUP.md     # Guía configuración Cloudflare
 ├── scripts/
 │   ├── backup.sh               # Script backup PostgreSQL
 │   └── restore.sh              # Script restauración
+├── .gitignore
+├── LICENSE
 └── README.md
 ```
 
@@ -223,8 +222,6 @@ docker-compose pull
 docker-compose up -d
 ```
 
-Ver más: [docs/UPGRADE.md](docs/UPGRADE.md)
-
 ## 🐛 Troubleshooting
 
 ### n8n no conecta a PostgreSQL
@@ -247,15 +244,12 @@ sudo journalctl -u cloudflared -f
 sudo cloudflared tunnel info n8n-tunnel
 ```
 
-Ver más: [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)
-
 ## 📚 Documentación Adicional
 
-- [Configuración Cloudflare](docs/CLOUDFLARE_SETUP.md)
-- [Troubleshooting](docs/TROUBLESHOOTING.md)
-- [Upgrade Guide](docs/UPGRADE.md)
-- [n8n Official Docs](https://docs.n8n.io/)
-- [Cloudflare Tunnel Docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/)
+- [Configuración Cloudflare Tunnel](docs/CLOUDFLARE_SETUP.md) - Guía completa paso a paso
+- [n8n Official Docs](https://docs.n8n.io/) - Documentación oficial de n8n
+- [Cloudflare Tunnel Docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/) - Documentación de Cloudflare
+- [Docker Compose Docs](https://docs.docker.com/compose/) - Referencia de Docker Compose
 
 ## 🤝 Contribuciones
 
