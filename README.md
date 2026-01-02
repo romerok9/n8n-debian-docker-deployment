@@ -9,6 +9,14 @@
 
 Deployment completo de **n8n** (plataforma de automatización) en servidor Debian con Docker Compose, PostgreSQL, Nginx y túnel Cloudflare para acceso seguro desde internet.
 
+
+## 🌟 Open Source
+
+Este proyecto es de código abierto para ayudar a la comunidad DevOps a deployar n8n fácilmente.
+Todos los scripts y configuraciones están disponibles para que puedas aprender y adaptar.
+
+**Si este proyecto te fue útil, considera dejarle una ⭐ al repo!**
+
 ## 🎯 Características
 
 - ✅ **n8n** - Plataforma de automatización self-hosted
