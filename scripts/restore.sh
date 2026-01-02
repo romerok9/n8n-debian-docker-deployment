@@ -101,3 +101,24 @@ echo ""
 echo "You may need to restart n8n:"
 echo "  docker-compose restart n8n"
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
